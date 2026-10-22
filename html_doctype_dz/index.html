@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебная работа о типах и версиях HTML и объявлении DOCTYPE.">
+    <title>DOCTYPE и версии HTML — учебная работа</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1e293b;
+            --muted: #475569;
+            --accent: #0f766e;
+            --paper: #ffffff;
+            --wash: #f1f5f9;
+            --line: #cbd5e1;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--wash);
+        }
+        header {
+            padding: 3rem 1.25rem;
+            color: white;
+            background: linear-gradient(135deg, #0f766e, #164e63);
+        }
+        .wrap { width: min(100% - 2rem, 960px); margin: 0 auto; }
+        h1 { margin: 0 0 .5rem; line-height: 1.2; }
+        header p { max-width: 720px; margin-bottom: 0; }
+        main { padding: 2rem 0 3rem; }
+        section {
+            margin: 0 0 1.25rem;
+            padding: 1.5rem;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+        }
+        h2 { margin-top: 0; color: var(--accent); }
+        code, pre {
+            font-family: Consolas, "Courier New", monospace;
+        }
+        code {
+            padding: .15rem .35rem;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow-wrap: anywhere;
+        }
+        pre {
+            padding: 1rem;
+            overflow-x: auto;
+            background: #0f172a;
+            color: #e2e8f0;
+            border-radius: 8px;
+        }
+        .note {
+            padding: 1rem;
+            border-left: 4px solid var(--accent);
+            background: #ccfbf1;
+            border-radius: 4px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: .75rem; text-align: left; border: 1px solid var(--line); vertical-align: top; }
+        th { background: #e2e8f0; }
+        footer { padding: 1.5rem 0; color: var(--muted); text-align: center; }
+        @media (max-width: 620px) {
+            section { padding: 1rem; }
+            table { display: block; overflow-x: auto; }
+            header { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1>DOCTYPE и версии HTML</h1>
+            <p>Учебная работа: зачем нужен DOCTYPE, как менялись версии HTML и почему современные страницы обычно используют HTML5.</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section>
+            <h2>1. Что такое DOCTYPE?</h2>
+            <p><code>DOCTYPE</code> — это объявление типа документа. Оно размещается в самом начале HTML-файла, перед тегом <code>&lt;html&gt;</code>. Браузер использует это объявление, чтобы выбрать стандартный режим отображения страницы.</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p class="note"><strong>Важно:</strong> в HTML5 используется короткое объявление <code>&lt;!DOCTYPE html&gt;</code>. Оно не указывает номер версии цифрами, но сообщает браузеру, что документ должен отображаться в стандартном режиме.</p>
+        </section>
+
+        <section>
+            <h2>2. Основные версии HTML</h2>
+            <table>
+                <thead>
+                    <tr><th>Версия</th><th>Краткое описание</th><th>Объявление DOCTYPE</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML 2.0</td>
+                        <td>Одна из первых стандартизированных версий языка, опубликованная в 1995 году.</td>
+                        <td>Использовались формальные объявления типа документа, связанные с DTD.</td>
+                    </tr>
+                    <tr>
+                        <td>HTML 3.2</td>
+                        <td>Стандарт 1997 года, включавший многие распространённые на тот момент возможности разметки.</td>
+                        <td>Например, публичный идентификатор W3C для HTML 3.2.</td>
+                    </tr>
+                    <tr>
+                        <td>HTML 4.01</td>
+                        <td>Стандарт 1999 года. Существовали варианты Strict, Transitional и Frameset.</td>
+                        <td>Зависел от выбранного варианта HTML 4.01.</td>
+                    </tr>
+                    <tr>
+                        <td>XHTML 1.0</td>
+                        <td>HTML, основанный на синтаксических правилах XML; требовал более строгого оформления разметки.</td>
+                        <td>Использовались объявления с идентификаторами XHTML 1.0.</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Современный подход к HTML, поддерживаемый актуальными браузерами.</td>
+                        <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>3. Почему объявление пишут первым?</h2>
+            <ul>
+                <li>Оно помогает браузеру выбрать стандартный режим отображения.</li>
+                <li>Оно должно находиться до любых HTML-элементов страницы.</li>
+                <li>В современном HTML объявление короткое и не требует ссылки на DTD.</li>
+                <li>Если объявление отсутствует или написано некорректно, браузер может включить режим совместимости со старыми страницами.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Что хранится в doctypes.txt?</h2>
+            <p>В файле <code>doctypes.txt</code> собраны примеры объявлений для разных типов документов и краткие пояснения к ним. Это отдельный текстовый файл, как требует задание.</p>
+            <p>Для новой учебной или рабочей страницы обычно достаточно первой строки:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>5. Вывод</h2>
+            <p>DOCTYPE — важная часть структуры HTML-документа. Он должен стоять в первой строке файла и помогает браузеру правильно интерпретировать разметку. В старых версиях HTML объявления были длинными и ссылались на DTD. В HTML5 применяется простая запись <code>&lt;!DOCTYPE html&gt;</code>, которую рекомендуется использовать в новых проектах.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">Учебный проект по теме HTML · Файл можно открыть в любом современном браузере.</div>
+    </footer>
+</body>
+</html>

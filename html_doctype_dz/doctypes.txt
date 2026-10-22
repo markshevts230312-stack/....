@@ -1,0 +1,32 @@
+DOCTYPE — объявления типов документов HTML
+
+1. HTML5 (современный HTML)
+<!DOCTYPE html>
+Используется для современных HTML-документов. Это рекомендуемый вариант для новых страниц.
+
+2. HTML 4.01 Strict
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
+Строгий вариант HTML 4.01. Не включал часть устаревших презентационных элементов и атрибутов.
+
+3. HTML 4.01 Transitional
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+Переходный вариант HTML 4.01, допускавший некоторые элементы и атрибуты, которые считались устаревающими.
+
+4. HTML 4.01 Frameset
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "https://www.w3.org/TR/html4/frameset.dtd">
+Вариант HTML 4.01 для документов с фреймами.
+
+5. XHTML 1.0 Strict
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+Строгий вариант XHTML 1.0, основанный на правилах XML.
+
+6. XHTML 1.0 Transitional
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+Переходный вариант XHTML 1.0.
+
+Примечания:
+- DOCTYPE — это объявление типа документа, а не обычный HTML-тег.
+- В HTML5 используется короткая запись <!DOCTYPE html>.
+- DOCTYPE следует размещать в начале HTML-файла, до элемента <html>.
+- Старые объявления приведены для ознакомления и поддержки исторических документов.
+- Для новых проектов рекомендуется использовать HTML5.
